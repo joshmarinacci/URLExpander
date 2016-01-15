@@ -2,13 +2,13 @@ var fs = require('fs');
 var express = require('express');
 var app = express();
 
-var mappings = JSON.parse(fs.readFileSync("mappings.json").toString()).mappings;
+var config = JSON.parse(fs.readFileSync("config.json").toString());
 
 app.get('*',function(req,res) {
-    if(mappings[req.url]) return res.redirect(mappings[req.url]);
+    if(config.mappings[req.url]) return res.redirect(config.mappings[req.url]);
     res.status(404).send("invalid path " + req.url);
 });
 
-app.listen(3123, function(err){
-    console.log("localhost:3123");
+app.listen(config.port, function(){
+    console.log("localhost:"+config.port);
 });

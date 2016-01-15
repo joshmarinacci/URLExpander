@@ -1,4 +1,5 @@
 {
+  "port":3166,
   "mappings": {
     "/foo": "http://www.google.com/"
   }
