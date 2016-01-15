@@ -1,0 +1,5 @@
+{
+  "mappings": {
+    "/foo": "http://www.google.com/"
+  }
+}
