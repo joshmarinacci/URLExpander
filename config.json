@@ -1,6 +1,7 @@
 {
   "port":3166,
   "mappings": {
-    "/foo": "http://www.google.com/"
+    "/foo": "http://www.google.com/",
+    "/bar": "http://www.yahoo.com/"
   }
 }
