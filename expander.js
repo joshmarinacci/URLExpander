@@ -10,6 +10,10 @@ app.get('*',function(req,res) {
     res.status(404).send("invalid path " + req.url);
 });
 
-app.listen(config.port, function(){
-    console.log("localhost:"+config.port);
+app.listen(config.port);
+
+fs.watchFile("config.json", function() {
+    try {
+        config.mappings = JSON.parse(fs.readFileSync("config.json").toString()).mappings;
+    } catch (ex) { }
 });
