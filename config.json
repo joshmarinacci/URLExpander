@@ -1,6 +1,7 @@
 {
-  "port":3166,
+  "port":42001,
   "mappings": {
-    "/foo": "http://www.google.com/"
+    "/foo": "http://www.google.com/",
+    "/canvasbook": "http://joshondesign.com/p/books/canvasdeepdive/toc.html"
   }
 }
